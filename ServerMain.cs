@@ -8,7 +8,7 @@ using System;
 
 namespace PseudoRMI_ChatServer
 {
-    public class ServerMain
+    public class ChatServer
     {
         public static void Main(string[] args)
         {
@@ -30,7 +30,7 @@ namespace PseudoRMI_ChatServer
 
                 serviceBuilder.AddServiceEndpoint<ChatService, IChatService>(
                     new BasicHttpBinding(),
-                    "/DatabaseService"
+                    "/DatabaseChatService"
                 );
 
                 var metadataBehavior = app.Services.GetRequiredService<ServiceMetadataBehavior>();
