@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PseudoRMI_ChatServer", "PseudoRMI_ChatServer.csproj", "{668D6102-E926-4954-B414-65AC7F1A0DD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{668D6102-E926-4954-B414-65AC7F1A0DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{668D6102-E926-4954-B414-65AC7F1A0DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{668D6102-E926-4954-B414-65AC7F1A0DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{668D6102-E926-4954-B414-65AC7F1A0DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3524F8AD-19AE-4366-93C1-163534BC26E4}
+	EndGlobalSection
+EndGlobal
