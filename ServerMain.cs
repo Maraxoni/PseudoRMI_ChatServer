@@ -15,6 +15,7 @@ namespace PseudoRMI_ChatServer
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddSignalR();
+            builder.Services.AddSingleton<IChatService, ChatHub>();
 
             var app = builder.Build();
 
