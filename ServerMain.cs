@@ -14,29 +14,18 @@ namespace PseudoRMI_ChatServer
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            //builder.WebHost.UseUrls("http://192.168.50.183:8080");
-            builder.WebHost.UseUrls("http://localhost:8080");
-
-            builder.Services.AddServiceModelServices();
-            builder.Services.AddServiceModelMetadata();
-
-            builder.Services.AddSingleton<IChatService, ChatService>();
+            builder.Services.AddSignalR();
 
             var app = builder.Build();
 
-            app.UseServiceModel(serviceBuilder =>
+            //app.Urls.Add("http://192.168.50.183:8080");
+            app.Urls.Add("http://localhost:8080");
+
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
             {
-                serviceBuilder.AddService<ChatService>();
-
-                serviceBuilder.AddServiceEndpoint<ChatService, IChatService>(
-                    new BasicHttpBinding(),
-                    "/DatabaseChatService"
-                );
-
-                var metadataBehavior = app.Services.GetRequiredService<ServiceMetadataBehavior>();
-                metadataBehavior.HttpGetEnabled = true;
-                metadataBehavior.HttpsGetEnabled = false;
-                metadataBehavior.HttpGetUrl = new Uri("http://192.168.50.183:8080/DatabaseService/mex");
+                endpoints.MapHub<ChatHub>("/ChatHub");
             });
 
             app.Run();
